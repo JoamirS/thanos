@@ -35,9 +35,10 @@ ul li {
     box-shadow: 13px 11px 32px -10px rgba(0,0,0,0.25);
     margin: 0.5%;
     text-align: center;
+    font-family: "klavika-medium";
 }
 
-.labeltab {
+.labeltab, .select {
     font-family: 'klavika-medium';
     text-transform: uppercase;
 }
