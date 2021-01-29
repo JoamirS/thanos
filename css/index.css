@@ -23,6 +23,12 @@
     border-radius: 5px;
 }
 
+.itensOneActive {
+    background: rgb(0, 18, 59);
+    border-radius: 5px;
+}
+
+
 ul li {
     display: inline;
     text-align: center;
