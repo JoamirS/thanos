@@ -96,6 +96,10 @@ ul li {
     box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
 }
 
+.div-tabelas-esquerda-e-direita {
+    text-align: center;
+}
+
 .tabela-configurar-onu-1, .tabela-configurar-onu-2 {
     width: 30%;
     margin: auto;
@@ -110,10 +114,6 @@ ul li {
     background: white;
     display: inline-block;
     box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
-}
-
-.div-tabelas-esquerda-e-direita {
-    text-align: center;
 }
 
 .tabela-wifi-atual, .tabela-wifi-novo{
