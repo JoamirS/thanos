@@ -1,0 +1,162 @@
+.body {
+    background: rgb(214, 239, 255);
+}
+
+.menuOne {
+    background: rgb(3, 62, 140);
+    text-transform: uppercase;
+    font-size: small;
+    width: 99%;
+    margin: 0.5%;
+    padding-top: 2%;
+    padding-bottom: 0.7%;
+    color: white;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.itensOne:hover {
+    background: rgb(0, 18, 59);
+    border-radius: 5px;
+}
+
+ul li {
+    display: inline;
+    text-align: center;
+    margin: 0 0 0 50px;
+    font-family: 'klavika-medium';
+    padding: 20px;
+}
+
+.menuTwo {
+    width: 99%;
+    background: white;
+    text-transform: uppercase;
+    box-shadow: 13px 11px 32px -10px rgba(0,0,0,0.25);
+    margin: 0.5%;
+    text-align: center;
+}
+
+.labeltab {
+    font-family: 'klavika-medium';
+    text-transform: uppercase;
+}
+
+.tabela-status-olt, .tabela-status-onu {
+    width: 940px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'klavika-medium';
+    background: white;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+}
+
+.informacoes-estaticas-statusonu {
+    text-align: center;
+    
+}
+
+.informacoes-variaveis-statusonu {
+    text-align: center;
+    color: rgb(29, 134, 0);
+}
+
+.input {
+    display: inline-block;
+    margin-right: 50px;
+    color: white;
+    font-family: "klavika-medium";
+    font-size: large;
+}
+
+.tab {
+    display: inline-block;
+    margin-right: 50px;
+    margin-top: 20px;
+    color: white;
+    font-family: "klavika-medium";
+    font-size: large;
+    text-align: center;
+}
+
+.botoes-status-onu {
+    width: 940px;
+    margin: auto;
+    margin-bottom: 2%;
+    text-align: center;
+    background: white;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+}
+
+.tabela-configurar-onu-1, .tabela-configurar-onu-2 {
+    width: 30%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    font-family: 'klavika-medium';
+    background: white;
+    display: inline-block;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+}
+
+.div-tabelas-esquerda-e-direita {
+    text-align: center;
+}
+
+.tabela-wifi-atual, .tabela-wifi-novo{
+    width: 940px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'klavika-medium';
+    background: white;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.informacoes-variaveis-wifi {
+    text-align: center;
+}
+
+.barra-fixa {
+    min-width: max-content;
+    max-width: min-content;
+    margin: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+    font-family: "klavika-medium";
+}
+
+
+.informacoes-variaveis-wifi {
+    color: green;
+}
+
+@font-face{
+    font-family:"klavika-medium";
+    src:url("klavika-medium.otf") format("woff"),
+    url("klavika-medium.otf") format("opentype"),
+    url("klavika-medium.otf") format("truetype");
+}
+span.font5{font-family:"klavika-medium";font-size:55px;text-transform:none;}

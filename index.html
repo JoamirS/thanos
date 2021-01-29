@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Informações ONU</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+    <header>
+      <div class="menuOne">
+          <ul>
+            <li class="itensOne" href="#" id="InformacoesONU">Informações ONU</li>
+            <li class="itensOne" href="#" id="ProvisionarONU">Provisionar ONU</a></li>
+            <li class="itensOne" href="#" id="ConsultaOLT">Status OLT</li>
+            <li class="itensOne" href="#" id="Scripts">Comandos OLT</li> 
+            <li class="itensOne" href="#" id="Relatorios">Relatórios</li>
+            <li class="itensOne" href="#" id="Usuários">Usuários</li>
+          </ul>
+      </div>
+    </header>
+
+    <div class="menuTwo">
+        
+      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Digite o contrato" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"> STATUS ONU </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"> CONFIGURAR ONU </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"> WIFI ONU </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-phone-tab" data-bs-toggle="pill" href="#pills-phone" role="tab" aria-controls="pills-phone" aria-selected="false">TELEFONIA</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+        <div class="tabela-status-olt">
+          <table cellspacing="10" cellpadding="9" align="center" class="table table-bordered">
+            <thead>
+              <tr class="informacoes-estaticas-statusonu">
+                <th> MAC ONU </th>
+                <th> OLT </th>
+                <th> SLOT</th>
+                <th> PON </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="informacoes-variaveis-statusonu">
+                <td id="mac-onu"> FHTT923D3890 </td>
+                <td id="olt-cliente"> ARACAGY </td>
+                <td id="slot-olt"> 16 </td>
+                <td id="pon-olt"> 7 </td>   
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tabela-status-onu" >
+          <table cellspacing="10" cellpadding="9" align="center" class="table table-bordered">
+            <thead>
+              <tr class="informacoes-estaticas-statusonu">
+                <th> ADMINSTATE </th>
+                <th> OPENSTATE </th>
+                <th> DOWNLOAD </th>
+                <th> UPLOAD </th>
+                <th> RX ONU </th>
+                <th> RX OLT </th>
+              </tr>
+            </thead>
+      
+            <tbody>
+              <tr class="informacoes-variaveis-statusonu">
+                <td id="administrate"> UP </td>
+                <td id="openstate"> UP </td>
+                <td id="download"> 30720 Kbps </td>
+                <td id="upload"> 12800 Kbps </td>
+                <td id="rx-onu"> -18 dbm </td>
+                <td id="rx-olt"> -20 dbm </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="fixed-bottom">
+          <div class="barra-fixa status">
+            <button type="button" class="btn btn-primary btn-lg" id="reset-onu"> Resetar </button>
+            <button type="button" class="btn btn-primary btn-lg" id="sync-band"> Sincronizar Banda </button>
+            <button type="button" class="btn btn-primary btn-lg" id="reload-onu"> Recarregar </button>
+            <button type="button" class="btn btn-primary btn-lg" id="unlock-onu"> Desbloquear </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="div-tabelas-esquerda-e-direita">
+
+          <div class="tabela-configurar-onu-1">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  Configuração IP
+                </tr>
+              </thead>
+              <tr>
+                <th> IP ONU: </th>
+                <td id="ip-onu"> 177.47.52.238 </td>
+              </tr>
+              <tr>
+                <th> DNS 1: </th>
+                <td id="dns-1"> 201.76.128.43 </td>
+              </tr>
+              <tr>
+                <th> DNS 2: </th>
+                <td id="dns-2"> 201.76.128.34 </td>
+              </tr>
+              <tr>
+                <th> Hardware version: </th>
+                <td id="dns-2"> WKF2.134.285f4G </td>
+              </tr>
+              <tr>
+                <th> Software version: </th>
+                <td id="temperature-onu"> RP2643 </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="tabela-configurar-onu-2">
+            <table class="table table-striped">
+              <tr>
+                <th> Tempo ligado: </th>
+                <td id="temperature-onu"> 8 dia(s) 17h 44m 37s</td>
+              </tr>
+              <tr>
+                <th> Distância: </th>
+                <td id="ip-onu"> 500 metros </td>
+              </tr>
+              <tr>
+                <th> Corrente: </th>
+                <td id="dns-1"> 18:85 mA </td>
+              </tr>
+              <tr>
+                <th> Temperatura: </th>
+                <td id="temperature-onu"> 62.03 °C </td>
+              </tr>
+              <tr>
+                <th> Tensão: </th>
+                <td id="temperature-onu"> 3.28 V </td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="fixed-bottom">
+            <div class="barra-fixa configure">
+              <button type="button" class="btn btn-primary btn-lg" id="configure-onu"> Configurar IP </button>
+              <button type="button" class="btn btn-primary btn-lg" id="config-dns"> Configurar DNS </button>
+              <button type="button" class="btn btn-primary btn-lg" id="restore-onu"> Restaurar </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="tabela-configurar-wifi">
+
+          <div class="tabela-wifi-atual">
+            <table cellspacing="10" cellpadding="9" align="center" class="table table-bordered">
+              <thead>
+                <tr class="informacoes-estaticas-wifi">
+                  <th> NOME DA REDE </th>
+                  <th> SENHA DA REDE </th>
+                  <th> CANAL DO WIFI </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="informacoes-variaveis-wifi">
+                  <td id="mac-onu"> Personal Px </td>
+                  <td id="olt-cliente"> PERSONAL2020 </td>
+                  <td id="canal-wifi"> 3 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tabela-wifi-novo">
+            <table cellspacing="10" cellpadding="9" align="center" class="table table-bordered">
+              <thead class="informacoes-estaticas-wifi">
+                <tr>
+                  <th> NOVA REDE WIFI </th>
+                  <th> NOVA SENHA </th>
+                  <th> CANAL DO WIFI </th>
+                </tr>
+              </thead>
+              <tbody class="informacoes-variaveis-wifi justify-content-center">
+                <tr>
+                  <td id="rede-wifi">
+                    <form>
+                      <div class="form-row">
+                        <div class="col-13">
+                          <input type="text" 
+                          class="form-control" 
+                          placeholder="Digite a nova rede"
+                          data-toggle="tooltip"
+                          title="O nome não pode conter acento ou caracteres especiais.">
+                        </div>
+                      </div>
+                    </form>
+                  </td>
+                  <td id="senha-wifi">
+                    <form class="form-inline">
+                      <div class="form-group">
+                        <label for="inputPassword6"></label>
+                        <input type="text" 
+                        id="inputPassword6" 
+                        class="form-control mx-sm-3" 
+                        aria-describedby="passwordHelpInline" 
+                        placeholder="Digite a nova senha"
+                        data-toggle="tooltip"
+                        title="Precisa ter no mínimo 8 caracteres."
+                        >
+                      </div>
+                    </form>
+                  </td>
+                  <td id="canal-wifi">
+                    <form class="form-inline">
+                      <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                        <option selected> Auto</option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        <option value="13"> 13 </option>
+                      </select>
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="fixed-bottom">
+            <div class="barra-fixa">
+              <button type="button" class="btn btn-primary btn-lg" id="configure-onu">Salvar</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-phone" role="tabpanel" aria-labelledby="pills-phone-tab">
+        <div class="">
+          test
+        </div>
+      </div>
+
+    </div>
+</body>
+
+
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip({
+        placement: 'bottom',
+        trigger: 'hover'
+      });
+  });
+  </script>
+</html>
