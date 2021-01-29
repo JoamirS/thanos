@@ -16,13 +16,13 @@
 <body class="body">
     <header>
       <div class="menuOne">
-          <ul>
-            <li class="itensOne" href="#" id="InformacoesONU"><a href="index.html" class="nav-link"> Informações ONU</a></li>
-            <li class="itensOne" href="#" id="ProvisionarONU">Provisionar ONU</a></li>
-            <li class="itensOne"><a class="nav-link" href="status-olt.html" id="ConsultaOLT">Status OLT </a></li>
-            <li class="itensOne" href="#" id="Scripts">Comandos OLT</li> 
-            <li class="itensOne" href="#" id="Relatorios">Relatórios</li>
-            <li class="itensOne" href="#" id="Usuários">Usuários</li>
+          <ul class="nav">
+            <li class="itensOne nav-item"><a class="nav-link text-light active" href="index.html" id="InformacoesONU"> Informações ONU</a></li>
+            <li class="itensOne nav-item"><a class="nav-link text-light" href="provisiona-onu.html" id="ProvisionarONU">Provisionar ONU</a></li>
+            <li class="itensOne nav-item"><a class="nav-link text-light" href="status-olt.html" id="ConsultaOLT">Status OLT </a></li>
+            <li class="itensOne nav-item"><a class="nav-link text-light" href="comandos-olt.html" id="Scripts"> Comandos OLT </a></li> 
+            <li class="itensOne nav-item"><a class="nav-link text-light" href="relatorios.html" id="Relatorios"> Relatórios </a></li>
+            <li class="itensOne nav-item"><a class="nav-link text-light" href="usuarios.html" id="Usuários"> Usuários </a></li>
           </ul>
       </div>
     </header>
@@ -289,7 +289,6 @@
     </div>
 </body>
 
-
 <script>
   $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip({
@@ -297,5 +296,6 @@
         trigger: 'hover'
       });
   });
-  </script>
+</script>
+
 </html>
