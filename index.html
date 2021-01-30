@@ -31,10 +31,8 @@
         
       <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
         <li>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Digite o contrato" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-          </form>
+            <input id="pesquisar_input" class="form-control mr-sm-2" type="search" placeholder="Digite o contrato" aria-label="Search">
+            <button id="pesquisar_button" class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="pesquisar()">Pesquisar</button>
         </li>
         <li class="nav-item" role="presentation">
           <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"> STATUS ONU </a>
@@ -287,7 +285,7 @@
 
     </div>
 </body>
-
+<script src="js/index.js"></script>
 <script>
   $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip({
