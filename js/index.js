@@ -22,7 +22,17 @@ function pesquisarONU(){
 
 function preencherStatusONU(onu){
     if (onu['result']){
-        alert(onu['mac']);
+        document.getElementById('mac-onu').innerHTML = onu['mac'];
+        document.getElementById('olt-cliente').innerHTML = onu['olt'];
+        document.getElementById('slot-olt').innerHTML = onu['slot'];
+        document.getElementById('pon-olt').innerHTML = onu['pon'];
+
+        document.getElementById('administrate').innerHTML = onu['adminStatus'];
+        document.getElementById('openstate').innerHTML = onu['operStatus'];
+        document.getElementById('download').innerHTML = onu['down'];
+        document.getElementById('upload').innerHTML = onu['up'];
+        document.getElementById('rx-onu').innerHTML = onu['rx'];
+        document.getElementById('rx-olt').innerHTML = onu['tx'];
     }
 }
 
