@@ -27,12 +27,12 @@ function preencherStatusONU(onu){
         document.getElementById('slot-olt').innerHTML = onu['slot'];
         document.getElementById('pon-olt').innerHTML = onu['pon'];
 
-        document.getElementById('administrate').innerHTML = onu['adminStatus'];
+        onu['adminStatus'] ? document.getElementById('administrate').innerHTML = "UP" : document.getElementById('administrate').innerHTML = "DOWN";
         document.getElementById('openstate').innerHTML = onu['operStatus'];
-        document.getElementById('download').innerHTML = onu['down'];
-        document.getElementById('upload').innerHTML = onu['up'];
-        document.getElementById('rx-onu').innerHTML = onu['rx'];
-        document.getElementById('rx-olt').innerHTML = onu['tx'];
+        document.getElementById('download').innerHTML = onu['down'] + " Kbps";
+        document.getElementById('upload').innerHTML = onu['up'] + " Kbps";
+        document.getElementById('rx-onu').innerHTML = onu['rx'] + " dbm";
+        document.getElementById('rx-olt').innerHTML = onu['tx'] + " dbm";
     }
 }
 
