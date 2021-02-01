@@ -36,7 +36,6 @@ function preencherStatusONU(onu){
     }
 }
 
-
 document.getElementById('pesquisar_button').onclick = function(e) {
     pesquisarONU();
     console.log("Clicado");
