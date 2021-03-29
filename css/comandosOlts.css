@@ -1,0 +1,17 @@
+.comandos-style{
+    width: 940px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'klavika-medium';
+    background: white;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+}
+
+.opcao-comando {
+    text-align: center;
+}
