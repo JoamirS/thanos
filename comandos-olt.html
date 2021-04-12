@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Informações OLT </title>
+    <link rel="stylesheet" href="css/comandosOlts.css">
     <link rel="stylesheet" href="css/index.css">
-    <link ref="stylesheet" href="css/comandosOlts.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -22,14 +22,15 @@
     <header>
       <div class="menuOne">
         <ul class="nav justify-content-center">
-          <li class="itensOne nav-item"><a class="nav-link text-light" href="index.html"
-              id="InformacoesONU"> Informações ONU</a></li>
+          <li class="itensOne nav-item"><a class="nav-link text-light" href="index.html" id="InformacoesONU">
+              Informações ONU</a></li>
           <li class="itensOne nav-item"><a class="nav-link text-light" href="provisiona-onu.html"
               id="ProvisionarONU">Provisionar ONU</a></li>
           <li class="itensOne nav-item"><a class="nav-link text-light" href="status-olt.html" id="ConsultaOLT">Status
               OLT
             </a></li>
-          <li class="itensOne itensOneActive nav-item"><a class="nav-link text-light" href="comandos-olt.html" id="Scripts"> Comandos
+          <li class="itensOne itensOneActive nav-item"><a class="nav-link text-light" href="comandos-olt.html"
+              id="Scripts"> Comandos
               OLT
             </a></li>
           <li class="itensOne nav-item"><a class="nav-link text-light" href="relatorios.html" id="Relatorios">
@@ -41,109 +42,158 @@
       </div>
     </header>
 
-    <div class="ping-comando">
-      <table>
+    <main>
+      <section class="ping-container">
+        <h4 class="titulo-conteiner"> PING OLT</h4>
+        <table>
+          <tbody id="olt-comando-ping">
+            <tr>
+              <td id="texto-selecionar-olt-ping"> Selecionar a OLT </td>
+              <td id="tabela-selecionar-olt-ping">
+                <select class="custom-select select" id="inputGroupSelect01">
+                  <option selected>Cidade Operária</option>
+                  <option value="1">Araçagy</option>
+                  <option value="2">Bacanga</option>
+                  <option value="3">Maiobão 2</option>
+                  <option value="4">Maiobão 1</option>
+                  <option value="5">Cidade Verde</option>
+                  <option value="6">São José de Ribamar</option>
+                  <option value="7">Condomínio Pleno</option>
+                  <option value="8">Raposa</option>
+                  <option value="9">São Raimundo</option>
+                  <option value="10">Vila Luizão</option>
+                  <option value="11">Arthur Carvalho</option>
+                  <option value="12">Tambaú</option>
+                  <option value="13">Alto Paranã</option>
+                  <option value="14">La Belle Park</option>
+                  <option value="15">Portal do Paço</option>
+                  <option value="16">Jardins</option>
+                  <option value="17">Cidade Olímpica 1</option>
+                  <option value="18">Cidade Olímpica 2</option>
+                  <option value="19">Cidade Olímpica 3</option>
+                  <option value="20">Janaína</option>
+                  <option value="21">Vinhais</option>
+                  <option value="23">Olho D'agua</option>
+                  <option value="24">D'Italy</option>
+                  <option value="25">Turu</option>
+                  <option value="26">Calhau</option>
+                  <option value="27">Centro</option>
+                  <option value="28">Rosário 1</option>
+                  <option value="29">Rosário 2</option>
+                  <option value="30">Kiola</option>
+                  <option value="31">Manaíra</option>
+                  <option value="32">Santa Rita 1</option>
+                  <option value="33">Santa Rita 2</option>
+                  <option value="34">Eco Park</option>
+                  <option value="35">Cohab Anil 4</option>
+                  <option value="36">Villagio Cohatrac</option>
+                  <option value="37">Conjunto Primavera</option>
+                  <option value="38">Cohab Anil 3</option>
+                  <option value="39">Planalto Anil 1</option>
+                  <option value="40">Cohatrac 4</option>
+                  <option value="41">Cohatrac 1</option>
+                  <option value="42">Jardim Atlântico</option>
+                  <option value="43">Itapecuru 1</option>
+                  <option value="44">Itapecuru 2</option>
+                  <option value="45">Itapecuru 3</option>
+                  <option value="46">Chácara Brasil</option>
+                  <option value="47">Turu 2</option>
+                  <option value="48">Maranhão Novo</option>
+                  <option value="49">Matões Turu</option>
+                  <option value="50">Bequimão</option>
+                  <option value="51">Bequimão 2</option>
+                  <option value="52">Cohama</option>
+                  <option value="53">Angelim</option>
+                  <option value="54">TVN</option>
+              </td>
+              <td id="botao-selecionar-olt-ping">
+                <button id="pesquisar_button" class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                  onclick="ping_olt()"> PINGAR OLT</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        <thead>
-<<<<<<< HEAD
-          <tr class="opcao-comando-estatico">
-            <th> PING OLT </th>
-            <th>
-              <select class="custom-select select" id="inputGroupSelect01">
-                <option selected>Cidade Operária</option>
-                <option value="1">Araçagy</option>
-                <option value="2">Bacanga</option>
-                <option value="3">Maiobão 2</option>
-                <option value="4">Maiobão 1</option>
-                <option value="5">Cidade Verde</option>
-                <option value="6">São José de Ribamar</option>
-                <option value="7">Condomínio Pleno</option>
-                <option value="8">Raposa</option>
-                <option value="9">São Raimundo</option>
-                <option value="10">Vila Luizão</option>
-                <option value="11">Arthur Carvalho</option>
-                <option value="12">Tambaú</option>
-                <option value="13">Alto Paranã</option>
-                <option value="14">La Belle Park</option>
-                <option value="15">Portal do Paço</option>
-                <option value="16">Jardins</option>
-                <option value="17">Cidade Olímpica 1</option>
-                <option value="18">Cidade Olímpica 2</option>
-                <option value="19">Cidade Olímpica 3</option>
-                <option value="20">Janaína</option>
-                <option value="21">Vinhais</option>
-                <option value="23">Olho D'agua</option>
-                <option value="24">D'Italy</option>
-                <option value="25">Turu</option>
-                <option value="26">Calhau</option>
-                <option value="27">Centro</option>
-                <option value="28">Rosário 1</option>
-                <option value="29">Rosário 2</option>
-                <option value="30">Kiola</option>
-                <option value="31">Manaíra</option>
-                <option value="32">Santa Rita 1</option>
-                <option value="33">Santa Rita 2</option>
-                <option value="34">Eco Park</option>
-                <option value="35">Cohab Anil 4</option>
-                <option value="36">Villagio Cohatrac</option>
-                <option value="37">Conjunto Primavera</option>
-                <option value="38">Cohab Anil 3</option>
-                <option value="39">Planalto Anil 1</option>
-                <option value="40">Cohatrac 4</option>
-                <option value="41">Cohatrac 1</option>
-                <option value="42">Jardim Atlântico</option>
-                <option value="43">Itapecuru 1</option>
-                <option value="44">Itapecuru 2</option>
-                <option value="45">Itapecuru 3</option>
-                <option value="46">Chácara Brasil</option>
-                <option value="47">Turu 2</option>
-                <option value="48">Maranhão Novo</option>
-                <option value="49">Matões Turu</option>
-                <option value="50">Bequimão</option>
-                <option value="51">Bequimão 2</option>
-                <option value="52">Cohama</option>
-                <option value="53">Angelim</option>
-                <option value="54">TVN</option>
-              </select>
-            </th>
-            <th> <button id="pesquisar_button" class="btn btn-outline-success my-2 my-sm-0" type="submit"
-                onclick="ping_olt()"> PINGAR OLT</button></th>
-=======
-          <tr>
-            <th>
-            
-            </th>
-            <th>
-              Selecionar a OLT
-            </th>
-            <th>
-
-            </th>
->>>>>>> f08c83ef24d6ec0254fb0c578a502180129c0ed7
-          </tr>
-
-        </thead>
-
-        <tbody>
-          <th>
-            <td>
-
-            </td>
-          </th>
-        </tbody>
-
-      </table>
-    </div>
-
+      <section class="vlan-container">
+        <h4 class="titulo-conteiner"> Setar VLAN </h4>
+        <table>
+          <tbody id="olt-comando-setar-vlan">
+            <tr>
+              <td id="texto-selecionar-olt-setar-vlan"> Selecionar a OLT </td>
+              <td id="tabela-selecionar-olt-setar-vlan">
+                <select class="custom-select select" id="inputGroupSelect01">
+                  <option selected>Cidade Operária</option>
+                  <option value="1">Araçagy</option>
+                  <option value="2">Bacanga</option>
+                  <option value="3">Maiobão 2</option>
+                  <option value="4">Maiobão 1</option>
+                  <option value="5">Cidade Verde</option>
+                  <option value="6">São José de Ribamar</option>
+                  <option value="7">Condomínio Pleno</option>
+                  <option value="8">Raposa</option>
+                  <option value="9">São Raimundo</option>
+                  <option value="10">Vila Luizão</option>
+                  <option value="11">Arthur Carvalho</option>
+                  <option value="12">Tambaú</option>
+                  <option value="13">Alto Paranã</option>
+                  <option value="14">La Belle Park</option>
+                  <option value="15">Portal do Paço</option>
+                  <option value="16">Jardins</option>
+                  <option value="17">Cidade Olímpica 1</option>
+                  <option value="18">Cidade Olímpica 2</option>
+                  <option value="19">Cidade Olímpica 3</option>
+                  <option value="20">Janaína</option>
+                  <option value="21">Vinhais</option>
+                  <option value="23">Olho D'agua</option>
+                  <option value="24">D'Italy</option>
+                  <option value="25">Turu</option>
+                  <option value="26">Calhau</option>
+                  <option value="27">Centro</option>
+                  <option value="28">Rosário 1</option>
+                  <option value="29">Rosário 2</option>
+                  <option value="30">Kiola</option>
+                  <option value="31">Manaíra</option>
+                  <option value="32">Santa Rita 1</option>
+                  <option value="33">Santa Rita 2</option>
+                  <option value="34">Eco Park</option>
+                  <option value="35">Cohab Anil 4</option>
+                  <option value="36">Villagio Cohatrac</option>
+                  <option value="37">Conjunto Primavera</option>
+                  <option value="38">Cohab Anil 3</option>
+                  <option value="39">Planalto Anil 1</option>
+                  <option value="40">Cohatrac 4</option>
+                  <option value="41">Cohatrac 1</option>
+                  <option value="42">Jardim Atlântico</option>
+                  <option value="43">Itapecuru 1</option>
+                  <option value="44">Itapecuru 2</option>
+                  <option value="45">Itapecuru 3</option>
+                  <option value="46">Chácara Brasil</option>
+                  <option value="47">Turu 2</option>
+                  <option value="48">Maranhão Novo</option>
+                  <option value="49">Matões Turu</option>
+                  <option value="50">Bequimão</option>
+                  <option value="51">Bequimão 2</option>
+                  <option value="52">Cohama</option>
+                  <option value="53">Angelim</option>
+                  <option value="54">TVN</option>
+              </td>
+              <td id="texto-selecionar-olt-setar-vlan"> Selecionar a VLAN </td>
+              <td id="tabela-selecionar-vlan">
+                <select class="custom-select select" id="inputGroupSelect01">
+                  <option selected> 110</option>
+                  <option selected> 112</option>
+                  <option selected> 114</option>
+                  <option selected> 155</option>
+              </td>
+              <td id="botao-selecionar-olt-setar-vlan">
+                <button id="pesquisar_button" class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                  onclick="setar_vlan()"> SETAR VLAN </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
   </body>
-
-  <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip({
-        placement: 'bottom',
-        trigger: 'hover'
-      });
-    });
-  </script>
-
 </hmtl:5>

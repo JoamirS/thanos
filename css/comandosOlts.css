@@ -1,6 +1,7 @@
-.comandos-style {
-    width: 940px;
-    margin: auto;
+.ping-container {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
     margin-top: 1%;
     margin-bottom: 3%;
     border-width: 10px;
@@ -9,9 +10,37 @@
     border-radius: 5px;
     font-family: 'klavika-medium';
     background: white;
-    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.25);
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
 }
 
-.opcao-comando {
+.titulo-conteiner {
+    text-align: center;
+}
+
+.vlan-container {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    font-family: 'klavika-medium';
+    background: white;
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+table {
+    width: 100%;
+    margin-bottom: .5em;
+    table-layout: fixed;
+    border: 1px solid black;
+}
+
+td {
+    padding: .7em;
+    margin: 0;
     text-align: center;
 }
