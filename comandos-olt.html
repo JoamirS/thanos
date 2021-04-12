@@ -44,7 +44,7 @@
 
     <main>
       <section class="ping-container">
-        <h4 class="titulo-conteiner"> PING OLT</h4>
+        <h4 class="titulo-conteiner"> Ping OLT</h4>
         <table>
           <tbody id="olt-comando-ping">
             <tr>
@@ -195,8 +195,8 @@
         </table>
       </section>
 
-      <section class="sincronizar-banda-container">
-        <h4 class="titulo-conteiner"> Sincronizar banda</h4>
+      <section class="sincronizar-banda-conteiner">
+        <h4 class="titulo-conteiner"> Sincronizar Banda</h4>
         <table>
           <tbody id="olt-comando-sincronizar-banda">
             <tr>
@@ -209,11 +209,34 @@
               </td>
               <td id="botao-selecionar-olt-sincronizar-banda">
                 <button id="pesquisar_button" class="btn btn-outline-success my-2 my-sm-0" type="submit"
-                  onclick="setar_vlan()"> Sincronizar banda </button>
+                  onclick="sincronizar_banda()"> SINCRONIZAR BANDA </button>
               </td>
             </tr>
           </tbody>
         </table>
+      </section>
+
+      <section class="deletar-onu-inativa-container">
+        <h4 class="titulo-conteiner"> Deletar ONU's inativas</h4>
+        <table>
+          <tbody id="olt-comando-deletar-onu-inativa">
+            <tr>
+              <td id="texto-selecionar-olt-deletar-onu-inativa"> Selecionar a OLT </td>
+              <td id="tabela-selecionar-deletar-onu-inativa">
+                <select class="custom-select select" id="inputGroupSelect01">
+                  <option selected>Araçagy</option>
+                  <option value="1">TVN</option>
+                  <option value="2">Bacanga</option>
+              </td>
+              <td id="botao-selecionar-olt-deletar-inativas"> 
+                <button id="pesquisar_button" class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                  onclick="deletar_inativas()">DELETAR INATIVAS</button>
+              </td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </section>
     </main>
   </body>
