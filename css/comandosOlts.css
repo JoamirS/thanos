@@ -65,12 +65,5 @@
 table {
     width: 100%;
     margin-bottom: .5em;
-    table-layout: fixed;
     border: 1px solid black;
-}
-
-td {
-    padding: .7em;
-    margin: 0;
-    text-align: center;
 }
